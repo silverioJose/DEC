@@ -1,0 +1,111 @@
+<!doctype html>
+<link rel="stylesheet" href="style.css">
+<html lang="pt-BR">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Descarte Consciente</title>
+    <link rel="icon" href="imgs/recicle.png">
+    <script src="scripts/theme.js" defer></script>
+</head>
+
+<body> 
+<header>
+    <div class="smallButton">
+        <button onclick="window.location.href='index.html'"> 
+           <svg class="icon">
+                <use href="icons.svg#iconHome"></use>
+            </svg> 
+        </button>
+    </div>
+    
+    <div class="bar">
+        <h2>
+            Descarte de <br>
+            Eletrônicos <br>
+            Consciente <br>
+            </h2>
+    </div>
+
+    <div class="smallButton">
+    <button id="toggle"> 
+        <svg class="icon">
+            <use href="icons.svg#iconToggle"></use>
+        </svg>      
+    </button>
+    </div>
+</header>
+
+<main>
+
+    <div class="form">
+        <div class="bg">
+            <h3> Formulário de Cadastro </h3>
+            <div class="box">
+            Se você tem interesse em se tornar um de nossos parceiros, preencha o formulário a seguir e entraremos em contato para
+            cadastrá-lo como um local oficial de descarte. <br> Contato pode levar de 2 a 3 dias uteis.
+            </div>
+
+                <form method="post" action="cadastro.php">
+                <h4> Responsável </h4>
+            
+            <div class = "field">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" placeholder="Nome completo do responsável pelo descarte." required>
+            </div>
+
+            <div class="field">
+                <label for="telefone">Telefone para Contato</label>
+                <input type="number" name="telefone" placeholder="(00 00000-0000)">
+            </div>
+
+            <div class="field">
+                <label for="email">E-mail para Contato</label>
+                <input type="text" name="email" placeholder="seuemailaqui@provedor.com">
+            </div>
+            
+            <h4> Local de Descarte </h4>
+            <div class="field">
+                <label for="nomeLocal">Nome do Local (se houver)</label>
+                <input type="text" name="nomeLocal" placeholder="Empresa ou organização responsável (opcional)">
+            </div>
+            
+            <div class="field">
+                <label for="desc">Descrição</label>
+                <input type="text" name="desc" placeholder="Descrição breve de com o que trabalha e quais serviços estão disponíveis." required>
+            </div>
+           
+            <div class="field">
+                <label for="local">Endereço</label>
+                <input type="text" name="local" placeholder="Rua, Avenida, Praça etc." required>
+            </div>
+
+            <div class="field">
+                <label for="numero">Número</label>
+                <input type="number" name="numero" placeholder="Número da construção (deixe vazio se não houver)">
+            </div>
+
+            <div class="field">
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" placeholder="Apenas São Lourenço e região">
+            </div>
+            
+            <div class="container">
+            <div class="field">
+                <button type="submit" class="btn_line" >Salvar Dados</button>
+                <button type="reset" class="btn_line">Limpar Campos</button>
+            </div>
+            </div>
+        </form>  
+    </div>
+</main>
+
+<footer>
+
+    <p> <br> Ana Carolina (16067), Naomi (15888), José (15565) - ADS 2026 </p>
+    
+</footer>
+
+</body>
+

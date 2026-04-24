@@ -1,0 +1,105 @@
+<!doctype html>
+<link rel="stylesheet" href="style.css">
+
+<html lang="pt-BR">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Descarte Consciente</title>
+    <link rel="icon" href="imgs/recicle.png">
+    <script src="scripts/theme.js" defer></script>
+</head>
+
+<body>
+
+<main>
+<div class="split">
+    <div class="column">
+
+        <!-- Title -->
+        <div class = "title">
+            <h1>
+                Descarte de <br> 
+                Eletrônicos <br> 
+                Consciente
+            </h1>
+        </div>
+        
+        <!-- Paragraph -->
+        <div class="text">
+            Caso tenha um eletrônico que precise descartar, saiba como fazê-lo da forma correta com nosso
+            <a href = "docs/Guia de Descarte.pdf">guia de descarte de eletrôronicos</a>.
+            <br>
+            <br>
+            Quando estiver pronto, utilize nosso mapa para encontrar um ponto de descarte perto de você.
+            <br>
+            <br>
+            Se estiver interessado, pode nos ajudar cadastrando seu próprio ponto de descarte oficial.
+            (Atualmente só trabalhamos com São Lourenço e região)
+            <br>
+            <br>
+            O meio-ambiente agradece!
+        </div>
+
+        <!-- Buttons -->
+        <div class="container">
+            <button onclick="window.location.href='map.php'">
+                
+                <svg class="icon">
+                <use href="icons.svg#iconPin"></use>
+                </svg> 
+                Encontrar um local de descarte próximo
+                
+            </button>
+            <br>
+            <br>
+
+            <div class="button2">
+            <button onclick="window.location.href='form.html'">
+                
+                <svg class="icon">
+                    <use href="icons.svg#iconPinPlus"></use>
+                </svg> 
+
+                Cadastrar local de descarte autorizado
+                
+            </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class= "column">
+
+    <div class="smallButton">
+        <button id="toggle"> 
+            <svg class="icon">
+                <use href="icons.svg#iconToggle"></use>
+            </svg>    
+        </button>
+        
+    </div> 
+        <!-- Brazil Map -->
+
+        <!-- The container where JS will inject all dot elements.
+            Its dimensions are set programmatically by map.js. -->
+        <div id="map-canvas"></div>
+
+        <!-- Tooltip element — shown briefly after a dot is clicked.
+            Visibility is toggled via the data-visible attribute in JS. -->
+        <!--div id="tooltip"></div-->
+
+        <!-- Dot-map script — deferred so the DOM is ready when it runs -->
+        <script src="scripts/dotMap.js" defer></script>
+
+    </div>
+</main>
+
+<footer>
+    <p> <br> Ana Carolina (16067), Naomi (15888), José (15565) - ADS 2026 </p>  
+</footer>
+
+</body>
+</html>
+

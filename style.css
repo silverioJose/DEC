@@ -1,0 +1,567 @@
+/* Palette */
+
+:root {
+  --salem-0: #c3ffd1;
+  --salem-1: #52c56b;
+  --salem-2: #16d96b;
+  --salem-3: #11bb5b;
+  --salem-4: #09853f;
+  --salem-5: #045928;
+  --salem-6: #023f1a;
+  --salem-7: #084115;
+  --salem-8: #000e03;
+}
+
+/* Custom Fonts */
+
+@font-face {
+    font-family: "MajorMono"; 
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/MajorMonoDisplay.ttf") format("truetype"); 
+}
+
+@font-face {
+    font-family: "Nunito"; 
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/Nunito.ttf") format("truetype"); 
+}
+
+@font-face {
+    font-family: "DM-Mono-L";
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/DMMono-Light.ttf") format("truetype"); 
+}
+
+@font-face {
+    font-family: "DM-Mono-M"; 
+    font-weight: bold;
+    font-style: normal;
+    src: url("fonts/DMMono-Medium.ttf") format("truetype"); 
+}
+
+@font-face {
+    font-family: "Robotto"; 
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/Robotto.ttf") format("truetype"); 
+}
+
+@font-face {
+    font-family: "ZillaB"; 
+    font-weight: normal;
+    font-style: normal;
+    src: url("fonts/ZillaSlabHighlight-Bold.ttf") format("truetype"); 
+}
+
+/* Light and Dark Mode */
+
+:root {
+--bg: var(--salem-0);
+--title: var(--salem-3);
+--text: var(--salem-6);
+--highlight: var(--salem-3);
+--shadow: var(--salem-2);
+--alt: var(--salem-2);
+--bttBg: var(--salem-2);
+}
+
+html.dark {
+--bg: var(--salem-8);
+--title: var(--salem-2);
+--text: var(--salem-0);
+--highlight: var(--salem-3);
+--shadow: var(--salem-4);
+--alt: var(--salem-6);
+--bttBg: var(--salem-2);
+
+    input {
+    background-color: var(--bg);
+    border: none;
+    border-bottom: 2px solid var(--shadow);
+    color: var(--highlight);
+    }
+
+    input::placeholder {
+        color: var(--text);
+    }
+
+    /* hover state */
+    input:hover {
+        background-color: var(--text);
+        box-shadow: 4px 4px 30px var(--shadow);
+    } 
+
+    input:hover::placeholder {
+    color: var(--bg);
+}   
+}
+
+body {
+font-family: "Robotto";  
+margin: 0;
+background-color: var(--bg);
+color: var(--text);
+
+}
+/* Header */
+
+header{
+    background-color: var(--bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Title */
+    
+h1{
+    font-family: "Nunito";
+    font-size: 80px;
+    padding-inline-start: 10px;
+    margin: 10px;
+    background-color: var(--bg);
+    padding: 5px;
+    color: var(--title);
+    text-shadow: 1px 1px 1px var(--shadow);
+}
+
+h2{
+    font-family: "Robotto";
+    font-size: 30px;
+    margin: 1px;
+    text-align: left; 
+    width: auto; 
+    background-color: var(--bg);
+    padding: 5px;
+    color: var(--highlight);
+}
+
+h3{
+    font-size: 40px;
+}
+
+h4{
+    font-size: 25px;
+    text-align: left;
+}
+
+/* Divs */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 5px;
+}
+
+.title{
+    margin: 10px;
+    margin-left: 35px;
+    display: flex;
+    flex:1;
+    gap: 20px;
+}
+
+.split img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+}
+
+.bar {
+    display: inline-block;
+    padding: 10px;
+    text-align: justify;
+    display: flex;
+}
+
+.text {
+    margin: 10px;
+    margin-left: 50px;
+    padding: 15px;
+    color: var(--text);
+    font-size: 20px;
+    font-family: "Robotto";
+}
+
+.smallButton {
+    display: block;
+    text-align: right;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.smallButton button{
+    min-width: 80px;
+    margin: 0;
+}
+
+.bg{
+    font-size: 25px;
+    padding: 50px;
+}
+
+.box{
+    padding: 20px;
+    font-size: 20px;
+    margin: 20px;
+    background-color: var(--bg);
+}
+
+.form{
+    width: 80%;
+    margin: 150px auto;
+}
+
+.field{
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.field button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--highlight);
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.miniIMG img {
+    width: 400px;
+    border: 2px solid var(--highlight);
+    border-radius: 20px;
+}
+
+.smallButton .icon{
+    width: 50px;
+    height: 50px;
+    display:block;
+    margin-right: 0px;
+    }
+
+.icon {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* --- Canvas that holds all dots --- */
+#map-canvas {
+  position: relative;   /* dots are absolutely positioned inside */
+  /* width/height are set by JS to match the SVG viewBox */
+}
+
+/* --- Individual dot --- */
+.dot {
+  position: absolute;
+  width: 10px;           /* base diameter */
+  height: 10px;
+  border-radius: 50%;   /* makes it a circle */
+  transform: translate(-50%, -50%); /* centre the dot on its coordinate */
+  cursor: pointer;
+  transition:
+    width       0.15s ease,
+    height      0.15s ease,
+    background  0.15s ease,
+    box-shadow  0.15s ease;
+
+  /* default colour — muted teal */
+  background: #2e9e53;
+  box-shadow: 0 0 2px rgba(46, 158, 74, 0.4);
+}
+
+/* --- Hover state: dot grows 2 px larger and brightens --- */
+.dot:hover {
+  width: 8px;           /* 4px base + 2px = 6px */
+  height: 8px;
+  background: #56d4f5;  /* bright cyan highlight */
+  box-shadow: 2px 2px 200px var(--shadow) !important;
+  z-index: 10;          /* float above neighbours */
+}
+
+/* --- "Active" (clicked) state — brief amber accent --- */
+.dot.active {
+  background: #f5a623;
+  box-shadow: 0 0 8px rgba(245,166,35,0.9);
+}
+
+/* --- Tooltip shown on click --- */
+#tooltip {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10,14,26,0.92);
+  border: 1px solid #2e7d9e;
+  color: #c8d8f0;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  pointer-events: none;  /* never intercepts mouse events */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Tooltip becomes visible when JS sets this attribute */
+#tooltip[data-visible="true"] {
+  opacity: 1;
+}
+
+/* Button */
+
+button {
+    background-color: var(--highlight);
+    border: none;
+    border-radius: 25px;
+    color: var(--text);
+    font-family: "Nunito";
+    margin: 5px;
+    padding: 20px;
+    font-size: 25px;
+    width: auto;
+    cursor: pointer;
+    box-shadow: 0 1px 2px var(--shadow);
+    min-width: 520px;
+}
+
+button:hover {
+    background-color: var(--bttBg);
+    
+    box-shadow: 4px 4px 30px var(--shadow);
+}
+
+.button2 button {
+    background-color: var(--bg);
+    border: 2px solid var(--highlight);
+    border-radius: 25px;
+    color: var(--text);
+    font-family: "Nunito";
+    margin: 5px;
+    padding: 20px;
+    font-size: 25px;
+    width: auto;
+    min-width: 520px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px var(--shadow);
+}
+
+.button2 button:hover {
+    border: 2px solid var(--text);
+    color: var(--text);
+    box-shadow: 4px 4px 30px var(--shadow);
+}
+
+a{
+    font-family: "Robotto";
+    text-align: center;
+    color: var(--highlight);
+    cursor: pointer;
+}
+
+a:hover {
+        background-color: var(--highlight);
+        color: var(--bg);
+    }
+
+a:visited {
+    color: var(--highlight);
+}
+
+a:visited:hover {
+    background-color: var(--highlight);
+    color: var(--bg);
+}
+
+/* Form */
+
+input {
+    background-color: var(--bg);
+    border: none;
+    border-bottom: 2px solid var(--shadow);
+    color: var(--highlight);
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 15px;
+    padding: 15px;
+    width: 100%;
+    display: block;
+}
+
+/* Fixes inputs getting out of div bound s*/
+input, select, textarea {
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: var(--highlight);
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 15;
+    font-style: italic;
+}
+
+/* hover state */
+input:hover {
+    background-color: var(--highlight);
+} 
+
+input:hover::placeholder {
+    color: var(--bg);
+}
+
+/* typing state */
+input:focus {
+    background-color: var(--alt);
+    color: var(--text);
+    outline: none;  /* remove default outline */
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+    
+footer{
+    text-align: center;
+}
+
+footer a{
+    color: var(--text) !important;
+    text-decoration: none;
+}
+
+/* Map */ 
+
+#map{
+    border: solid 2px var(--alt);
+    height: 600px;
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    }
+
+/*Popup*/
+.leaflet-popup-content-wrapper {
+    background-color: var(--bg)!important;
+    color: var(--text);
+    border-radius: 15px;
+    border: 0px solid var(--highlight);
+    box-shadow: none;
+}
+.leaflet-popup-tip {
+    background-color: var(--bg)!important;
+}
+.leaflet-popup-close-button {
+    background-color: var(--text) !important;
+    border-radius: 8px;
+    color: var(--bg) !important;
+    font-size: 25px !important;
+    padding: 2px 2px;
+    padding-bottom: 2px;
+    margin: 2px;
+    line-height: 22px !important;
+}
+.leaflet-popup-content img {
+    display: block;
+    margin: 13px auto 0 auto;
+    border-radius: 8px;
+    width: 150px;
+}
+.leaflet-popup-content {
+    margin: 8px;
+    width: 160px !important;
+    word-wrap: break-word;
+    text-align: center;
+}
+.leaflet-popup-content h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 8px 0 4px 0;
+    color: var(--text);
+}
+.leaflet-popup-content p {
+    font-size: 10px;
+    text-align: center;
+    margin: 8px 0 0px 0;
+    color: var(--text);
+}
+
+.leaflet-popup-content button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--highlight);
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    min-width: 30px;
+}
+
+/* Table */
+
+.table {
+    width: 80%;
+    margin :auto;
+    justify-content: center;
+}
+
+table {
+    font-size: 20px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+table td, th {
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    border-bottom: 1px solid var(--highlight) ;
+    padding: 30px;
+    text-align: left;
+}
+
+.table button{
+    min-width: 50px;
+}
+
+.table a {
+    text-decoration: none;
+}
+
+/* Spinner */
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Display Size-Porting */
+

@@ -1,0 +1,78 @@
+<!doctype html>
+<link rel="stylesheet" href="style.css">
+<html lang="pt-BR">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Descarte Consciente</title>
+    <script src="scripts/theme.js" defer></script>
+</head>
+
+<header>
+<div class="smallButton">
+    <button onclick="window.location.href='index.html'">
+        <svg class="icon">
+            <use href="icons.svg#iconHome"></use>
+        </svg> 
+    </button>
+</div>
+    
+<div class="smallButton">
+    <button id="toggle"> 
+        <svg class="icon">
+            <use href="icons.svg#iconToggle"></use>
+        </svg>  
+    </button>
+</div>
+</header>
+
+<body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <h2> Usuário 000 </h2>
+    
+    Nível 
+    <h1> 100 </h1>
+    Progresso:
+</div>
+
+<div class="progress-bar">
+    <div class="progress" id="progress">0%</div>
+</div>
+
+    <br>
+ <div class= "container">
+
+    <input type="number" id="progressInput" min="0" max="100" placeholder="Enter %">
+    <button onclick="updateProgress()">Update</button>
+
+</div>
+
+<script>
+    function updateProgress() {
+  const input = document.getElementById("progressInput").value;
+  const progress = document.getElementById("progress");
+
+  let value = Math.max(0, Math.min(100, input)); // keep between 0–100
+
+  progress.style.width = value + "%";
+  progress.textContent = value + "%";
+}
+</script>
+
+<footer>
+
+    <p> <br> Protótipo de Gameficação - Não finalizado </p>
+    
+</footer>
+
+</body>
